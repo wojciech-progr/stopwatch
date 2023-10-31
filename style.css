@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+:root {
+    --rist-color: #FA1406;
+    --second-color: #D2C7BE;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -12,4 +17,18 @@ body {
     min-height: 100vh;
     font-family: 'Montserrat', sans-serif;
     background-color: #333;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    width: 800px;
+    background-image: radial-gradient(circle, rgb(43, 44, 46) 0%, rgb(25, 25, 25) 93%);
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px black;
+    color: #fff;
 }
