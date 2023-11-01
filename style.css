@@ -5,7 +5,7 @@
 }
 
 :root {
-    --rist-color: #FA1406;
+    --first-color: #FA1406;
     --second-color: #D2C7BE;
 }
 
@@ -31,4 +31,19 @@ body {
     border-radius: 8px;
     box-shadow: 5px 5px 10px black;
     color: #fff;
+}
+
+.info {
+    position: absolute;
+    top: 6px;
+    right: 14px;
+    padding: 20px;
+    font-size: 24px;
+    color: var(--second-color);
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.info:hover {
+    color: var(--first-color);
 }
