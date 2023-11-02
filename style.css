@@ -47,3 +47,51 @@ body {
 .info:hover {
     color: var(--first-color);
 }
+
+h1 {
+    margin-bottom: -20px;
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+.stopwatch {
+    font-size: 72px;
+    color: var(--first-color);
+}
+
+.time {
+    visibility: hidden;
+    color: var(--second-color);
+    font-size: 22px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    width: 20%;
+    color: #fff;
+    font-size: 22px;
+    background-color: transparent;
+    border: 1px solid var(--first-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color .3s;
+}
+
+.history {
+    flex-grow: 1;
+    text-transform: uppercase;
+}
+
+button:hover,
+button:focus {
+    background-color: var(--first-color);
+    outline: none;
+}
