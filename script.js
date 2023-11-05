@@ -40,9 +40,28 @@ const handleStart = () => {
 
 }
 
-const handlePause = () => {
+const handleStop = () => {
+
+    time.innerHTML = `Ostatni czas: ${stopwatch.textContent}`;
+
+    if (stopwatch.textContent !== '0:00') {
+        time.style.visibility = 'visible';
+    }
+
     clearInterval(countTime);
+    stopwatch.textContent = '0:00';
+    timeList.textContent = '';
+    seconds = 0;
+    minutes = 0;
+
+}
+
+const handlePause = () => {
+
+    clearInterval(countTime);
+
 }
 
 startBtn.addEventListener('click', handleStart);
-pauseBtn.addEventListener('click', handlePause)
+pauseBtn.addEventListener('click', handlePause);
+stopBtn.addEventListener('click', handleStop);
