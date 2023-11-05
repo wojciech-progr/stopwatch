@@ -17,6 +17,8 @@ let seconds = 0;
 
 const handleStart = () => {
 
+    clearInterval(countTime);
+
     countTime = setInterval(() => {
 
         if (seconds < 9) {
@@ -38,4 +40,9 @@ const handleStart = () => {
 
 }
 
+const handlePause = () => {
+    clearInterval(countTime);
+}
+
 startBtn.addEventListener('click', handleStart);
+pauseBtn.addEventListener('click', handlePause)
