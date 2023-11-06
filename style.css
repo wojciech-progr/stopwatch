@@ -5,8 +5,9 @@
 }
 
 :root {
-    --first-color: green;
-    --second-color: #D2C7BE;
+    --first-color: rgb(250, 20, 6);
+    --second-color: rgb(190, 210, 197);
+    --hover-color: rgb(209, 33, 24);
 }
 
 body {
@@ -31,6 +32,7 @@ body {
     border-radius: 8px;
     box-shadow: 5px 5px 10px black;
     color: #fff;
+    overflow: hidden;
 }
 
 .info {
@@ -44,7 +46,7 @@ body {
     transition: color .3s;
 }
 
-.info:hover {
+.fas:hover {
     color: var(--first-color);
 }
 
@@ -122,7 +124,6 @@ button:focus {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 600px;
-    height: 360px;
     padding: 30px 60px;
     border-radius: 15px;
     background-color: rgb(245, 245, 245);
@@ -136,7 +137,6 @@ button:focus {
 
 .modal p {
     margin-bottom: 10px;
-    margin-left: 20px;
     font-size: 20px;
 }
 
@@ -164,4 +164,65 @@ button:focus {
     100% {
         opacity: 1;
     }
+}
+
+.fa-question,
+.fa-paint-brush {
+    padding: 10px;
+}
+
+.show-colors {
+    transform: translateX(-110px);
+}
+
+.colors {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 100px;
+    right: -100px;
+    width: 64px;
+    height: 220px;
+    transition: transform .3s;
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color .5s, box-shadow .5s;
+}
+
+.one {
+    background-color: rgb(250, 20, 6);
+    box-shadow: 0 0 8px rgb(250, 20, 6);
+}
+
+.two {
+    background-color: rgb(6, 173, 250);
+    box-shadow: 0 0 8px rgb(6, 173, 250);
+}
+
+.three {
+    background-color: rgb(0, 255, 42);
+    box-shadow: 0 0 8px rgb(0, 255, 42);
+}
+
+.one:hover {
+    background-color: rgb(209, 33, 24);
+    box-shadow: 0 0 16px rgb(250, 20, 6);
+}
+
+.two:hover {
+    background-color: rgb(28, 145, 199);
+    box-shadow: 0 0 16px(6, 173, 250)''
+}
+
+.three:hover {
+    background-color: rgb(28, 209, 58);
+    box-shadow: 0 0 16px rgb(0, 255, 42);
 }
