@@ -15,6 +15,8 @@ let countTime;
 let minutes = 0;
 let seconds = 0;
 
+let timesArr = [];
+
 const handleStart = () => {
 
     clearInterval(countTime);
@@ -46,6 +48,7 @@ const handleStop = () => {
 
     if (stopwatch.textContent !== '0:00') {
         time.style.visibility = 'visible';
+        timesArr.push(stopwatch.textContent);
     }
 
     clearInterval(countTime);
