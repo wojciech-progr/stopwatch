@@ -44,7 +44,7 @@ const handleStart = () => {
 
 const handleStop = () => {
 
-    time.innerHTML = `Ostatni czas: ${stopwatch.textContent}`;
+    time.innerHTML = `Latest time: ${stopwatch.textContent}`;
 
     if (stopwatch.textContent !== '0:00') {
         time.style.visibility = 'visible';
@@ -81,6 +81,7 @@ const clearStuff = () => {
 
 const showHistory = () => {
 
+    // Firstly reset archive
     timeList.textcontent = '';
     let num = 1;
 
