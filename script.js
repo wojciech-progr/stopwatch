@@ -96,8 +96,29 @@ const showHistory = () => {
 
 }
 
+const showModal = () => {
+
+    if (!(modalShadow.style.display === 'block')) {
+
+        // Show modal
+        modalShadow.style.display = 'block';
+
+    } else {
+
+        // Hide modal
+        modalShadow.style.display = 'none';
+
+    }
+
+    modalShadow.classList.toggle('modal-animation');
+
+}
+
 startBtn.addEventListener('click', handleStart);
 pauseBtn.addEventListener('click', handlePause);
 stopBtn.addEventListener('click', handleStop);
 resetBtn.addEventListener('click', handleReset);
 historyBtn.addEventListener('click', showHistory);
+infoBtn.addEventListener('click', showModal);
+closeModalBin.addEventListener('click', showModal);
+window.addEventListener('click', e => e.target === modalShadow ? showModal() : false);
