@@ -79,7 +79,24 @@ const clearStuff = () => {
 
 }
 
+const showHistory = () => {
+
+    timeList.textcontent = '';
+    let num = 1;
+
+    timesArr.forEach(time => {
+
+        const newTime = document.createElement('li');
+        newTime.innerHTML = `time measurement ${num}: <span>${time}</span>`
+        timeList.appendChild(newTime);
+        num++;
+
+    });
+
+}
+
 startBtn.addEventListener('click', handleStart);
 pauseBtn.addEventListener('click', handlePause);
 stopBtn.addEventListener('click', handleStop);
 resetBtn.addEventListener('click', handleReset);
+historyBtn.addEventListener('click', showHistory);
